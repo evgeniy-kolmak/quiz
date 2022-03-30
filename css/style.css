@@ -340,10 +340,4 @@ template {
 [hidden] {
   display: none;
 }
-
-.container {
-  margin: auto;
-  max-width: 1200px;
-  background-color: #000;
-}
 /*# sourceMappingURL=style.css.map */
