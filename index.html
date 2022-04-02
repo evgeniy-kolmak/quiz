@@ -10,9 +10,8 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header visible">
     <div class="header-item header-item__img">
-      <!-- <img src="img/bg.png" alt=""> -->
     </div>
     <!-- /.header-item__img -->
     <div class="header-item header-item__content">
@@ -21,7 +20,7 @@
       </svg>
       <h3 class="title">Самое время выбрать дизайн</h3>
       <span class="subtitle">Пройди опрос и получи скидку на первый заказ</span>
-      <button class="btn">
+      <button class="btn btn-start">
         Начать
         <svg class="arrow-right">
           <use xlink:href="img/sprite.svg#arrow-right"></use>
@@ -34,14 +33,79 @@
   </header>
   <!-- /.header -->
   <section class="form-quiz">
-    <img src="" alt="" class="logo">
-    <div class="progess-bar"></div>
-    <!-- /.progess-bar -->
-    <div class="form-quiz__item"></div>
-    <!-- /.form-quiz__item -->
+    <div class=" container">
+      <svg class="logo">
+        <use xlink:href="img/sprite.svg#logo"></use>
+      </svg>
+      <div class="progress-bar">
+        <div class="progress">
+          <div class="progress-success"></div>
+        </div>
+        <div class="progress-bar__item">
+          <svg class="progress-bar__img">
+            <use xlink:href="img/sprite.svg#info"></use>
+          </svg>
+        </div>
+        <div class="progress-bar__item">
+          <svg class="progress-bar__img">
+            <use xlink:href="img/sprite.svg#budget"></use>
+          </svg>
+        </div>
+        <div class="progress-bar__item">
+          <svg class="progress-bar__img">
+            <use xlink:href="img/sprite.svg#gear"></use>
+          </svg>
+        </div>
+        <div class="progress-bar__item">
+          <svg class="progress-bar__img">
+            <use xlink:href="img/sprite.svg#theme"></use>
+          </svg>
+        </div>
+        <div class="progress-bar__item">
+          <svg class="progress-bar__img">
+            <use xlink:href="img/sprite.svg#data"></use>
+          </svg>
+        </div>
+      </div>
+      <!-- /.progess-bar -->
+
+      <div class="form-quiz-items">
+        <div class="form-quiz-item">
+          <h3 class="title">Lorem ipsum dolor sit amet.</h3>
+          <span class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus consequatur
+            nisi praesentium, cupiditate voluptates odio ut possimus aperiam corrupti?</span>
+          <!-- <input class="type-design" type="radio" name="type-design">
+          <input class="type-design" type="radio" name="type-design">
+          <div class="form-quiz-cards">
+            <div class="form-quiz-card">
+              <h4 class="form-quiz-card__title">Lorem.</h4>
+              <img class="form-quiz-card__img" src="img/bag.png" alt="">
+            </div> -->
+          <!-- /.form-quiz__card -->
+          <!-- <div class="form-quiz-card">
+            <h4 class="form-quiz-card__title">Lorem.</h4>
+            <img class="form-quiz-card__img" src="img/man.png" alt="">
+          </div> -->
+          <!-- /.form-quiz__card -->
+          <!-- </div> -->
+          <!-- /.form-quiz__cards -->
+        </div>
+        <!-- /.form-quiz__item -->
+        <div class="form-quiz-item"></div>
+        <!-- /.form-quiz__item -->
+        <div class="form-quiz-item"></div>
+        <!-- /.form-quiz__item -->
+        <div class="form-quiz-item"></div>
+        <!-- /.form-quiz__item -->
+        <div class="form-quiz-item"></div>
+        <!-- /.form-quiz__item -->
+      </div>
+      <!-- /.form-quiz__items -->
+      <button class="btn btn-prev">Назад</button>
+      <button class="btn btn-next">Продолжить</button>
+    </div>
+    <!-- /.container -->
   </section>
-  <footer class="footer"></footer>
-  <!-- /.footer -->
   <script src="js/index.js"></script>
 </body>
 
