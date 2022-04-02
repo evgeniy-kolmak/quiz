@@ -410,6 +410,12 @@ svg path {
   width: 60px;
 }
 
+.logo-form-quiz {
+  width: 50px;
+  height: 50px;
+  margin: 40px 0 40px 0;
+}
+
 .title {
   font-style: normal;
   font-weight: 494;
@@ -453,6 +459,10 @@ svg path {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.step-visible {
+  display: block !important;
 }
 
 .header {
@@ -525,6 +535,10 @@ svg path {
   background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
 }
 
+.form-quiz-item {
+  display: none;
+}
+
 .progress {
   position: absolute;
   top: 50%;
@@ -534,6 +548,8 @@ svg path {
   background: #E5E4E1;
   -webkit-transition: all .4s ease 0s;
   transition: all .4s ease 0s;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.256);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.256);
 }
 
 .progress-success {
@@ -544,6 +560,8 @@ svg path {
   background: #eeac05;
   -webkit-transition: all .4s ease 0s;
   transition: all .4s ease 0s;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.256);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.256);
   width: 0;
 }
 
@@ -556,6 +574,7 @@ svg path {
           align-items: center;
   position: relative;
   max-width: 650px;
+  margin-bottom: 40px;
 }
 
 .progress-bar__item {
@@ -577,6 +596,8 @@ svg path {
   z-index: 2;
   -webkit-transition: all .4s ease 0s;
   transition: all .4s ease 0s;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.256);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.256);
 }
 
 .progress-bar__item:last-child {
@@ -633,5 +654,73 @@ svg path {
   background: #cd3a32;
   -webkit-transition: all .4s ease 0s;
   transition: all .4s ease 0s;
+}
+
+.form-quiz {
+  padding-bottom: 30px;
+  height: 100vh;
+}
+
+.form-quiz-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 470px;
+  margin-bottom: 45px;
+}
+
+.form-quiz-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 220px;
+  height: 220px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #2A2A2A;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+  border-radius: 18px;
+  cursor: pointer;
+  -webkit-transition: all .1s ease 0s;
+  transition: all .1s ease 0s;
+}
+
+.form-quiz-card:focus {
+  opacity: .9;
+}
+
+.form-quiz-card__title {
+  font-weight: 494;
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 0;
+}
+
+.form-quiz-card__img {
+  width: 100px;
+}
+
+.first-step-cards {
+  position: relative;
+}
+
+.type-design {
+  position: absolute;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */
