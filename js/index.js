@@ -24,6 +24,10 @@ const formQuizItem = document.querySelectorAll('.form-quiz-item');
 const budgetSlider = document.querySelector('.budget-content__slider');
 const budgetOutput = document.querySelector('.budget-content__output');
 
+// Третий шаг
+const thirdStepCard = document.querySelectorAll('.third-step-card');
+const typeLevel = document.querySelectorAll('.type-level');
+
 
 
 btnStart.addEventListener('click', function () {
@@ -80,6 +84,7 @@ btnPrev.addEventListener('click', function () {
 });
 
 
+// Первый шаг
 firstStepCard[0].addEventListener('click', function () {
   typeDesign[0].checked = 'checked';
   firstStepCard[0].style.background = '#171717'
@@ -90,7 +95,6 @@ firstStepCard[0].addEventListener('click', function () {
     btnNext.disabled = false;
     btnNext.style.opacity = '1';
   }
-
 
 });
 
@@ -107,11 +111,54 @@ firstStepCard[1].addEventListener('click', function () {
 
 });
 
-
+//  Второй шаг 
 budgetSlider.addEventListener('input', function () {
   budgetOutput.textContent = budgetSlider.value + '$';
   if (budgetSlider.value > '1550' || budgetSlider.value < '1550') {
     btnNext.disabled = false
     btnNext.style.opacity = '1';
   }
-})
+});
+
+
+// Третий шаг
+thirdStepCard[0].addEventListener('click', function () {
+  typeLevel[0].checked = 'cheked';
+  thirdStepCard[0].style.background = '#171717'
+  thirdStepCard[1].style.background = '#2A2A2A'
+  thirdStepCard[2].style.background = '#2A2A2A'
+  thirdStepCard[2].style.transitionDuratio = '0.4s';
+  thirdStepCard[1].style.transitionDuratio = '0.4s';
+  thirdStepCard[0].style.transitionDuratio = '0.4s';
+  if (typeLevel[0].checked === true) {
+    btnNext.disabled = false;
+    btnNext.style.opacity = '1';
+  }
+});
+thirdStepCard[1].addEventListener('click', function () {
+  typeLevel[1].checked = 'cheked';
+  thirdStepCard[1].style.background = '#171717'
+  thirdStepCard[2].style.background = '#2A2A2A'
+  thirdStepCard[0].style.background = '#2A2A2A'
+  thirdStepCard[0].style.transitionDuration = '0.4s';
+  thirdStepCard[1].style.transitionDuration = '0.4s';
+  thirdStepCard[2].style.transitionDuration = '0.4s';
+  if (typeLevel[1].checked === true) {
+    btnNext.disabled = false;
+    btnNext.style.opacity = '1';
+  }
+
+});
+thirdStepCard[2].addEventListener('click', function () {
+  typeLevel[2].checked = 'cheked';
+  thirdStepCard[2].style.background = '#171717'
+  thirdStepCard[1].style.background = '#2A2A2A'
+  thirdStepCard[0].style.background = '#2A2A2A'
+  thirdStepCard[0].style.transitionDuration = '0.4s';
+  thirdStepCard[1].style.transitionDuration = '0.4s';
+  thirdStepCard[2].style.transitionDuration = '0.4s';
+  if (typeLevel[2].checked === true) {
+    btnNext.disabled = false;
+    btnNext.style.opacity = '1';
+  }
+});
