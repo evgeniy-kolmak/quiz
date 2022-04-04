@@ -78,7 +78,7 @@ btnPrev.addEventListener('click', function () {
   formQuizItem[index - 1].classList.add('step-visible');
   formQuizItem[index].classList.remove('step-visible');
 
-  firstStepCard.forEach(item => item.classList.remove('focus'));
+  document.querySelectorAll('.form-quiz-card').forEach(item => item.classList.remove('focus'));
 
   btnNext.disabled = true;
   btnNext.style.opacity = '.5';
