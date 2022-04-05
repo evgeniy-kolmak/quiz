@@ -32,6 +32,11 @@ const thirdStepCard = document.querySelectorAll('.third-step-card');
 const typeLevel = document.querySelectorAll('.type-level');
 getChecked(thirdStepCard, typeLevel, btnNext);
 
+//Четвертый шаг
+const fourthStepCard = document.querySelectorAll('.fourth-step-card');
+const typeSite = document.querySelectorAll('.type-site');
+getChecked(fourthStepCard, typeSite, btnNext);
+
 btnStart.addEventListener('click', function () {
   header.classList.remove('visible');
   formQuiz.classList.add('visible');
@@ -58,8 +63,8 @@ btnNext.addEventListener('click', function () {
   const persentNext = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 + '%';
   progressSuccess.style.width = persentNext;
 
-  btnNext.disabled = true;
-  btnNext.style.opacity = '.5';
+  // btnNext.disabled = true;
+  // btnNext.style.opacity = '.5';
 });
 
 btnPrev.addEventListener('click', function () {
