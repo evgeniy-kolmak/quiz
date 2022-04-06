@@ -4,6 +4,7 @@ import { getChecked, getScroll, isActive } from "./functions.js";
 const btnStart = document.querySelector('.btn-start');
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
+const btnSend = document.querySelector('.btn-send')
 
 // Секции
 const header = document.querySelector('.header');
@@ -51,20 +52,20 @@ btnStart.addEventListener('click', function () {
 });
 
 btnNext.addEventListener('click', function () {
-  if (index === progressBarItems.length) {
-    window.location.href = '../success.html'
-  } else {
-    progressBarItems[index].classList.add('active-progress');
-    progressBarImage[index].classList.add('active-progress__img');
-    formQuizItem[index].classList.add('step-visible');
-    formQuizItem[index - 1].classList.remove('step-visible');
-    index += 1;
-
+  if (index === progressBarItems.length - 1) {
+    btnNext.style.display = 'none';
+    btnSend.style.display = 'inline-block';
   }
+  progressBarItems[index].classList.add('active-progress');
+  progressBarImage[index].classList.add('active-progress__img');
+  formQuizItem[index].classList.add('step-visible');
+  formQuizItem[index - 1].classList.remove('step-visible');
+  index += 1;
+
   const activeProgress = document.querySelectorAll('.active-progress');
   const persentNext = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 + '%';
   progressSuccess.style.width = persentNext;
-  isActive(false, btnNext)
+  // isActive(false, btnNext)
 });
 
 btnPrev.addEventListener('click', function () {
@@ -75,15 +76,25 @@ btnPrev.addEventListener('click', function () {
   if (index < 1) {
     header.classList.add('visible');
     formQuiz.classList.remove('visible');
-  } else {
-    progressBarItems[index].classList.remove('active-progress');
-    progressBarImage[index].classList.remove('active-progress__img');
-    formQuizItem[index - 1].classList.add('step-visible');
-    formQuizItem[index].classList.remove('step-visible');
+  } else if (index === progressBarItems.length - 1) {
+    btnNext.style.display = 'inline-block';
+    btnSend.style.display = '';
   }
+
+  progressBarItems[index].classList.remove('active-progress');
+  progressBarImage[index].classList.remove('active-progress__img');
+  formQuizItem[index - 1].classList.add('step-visible');
+  formQuizItem[index].classList.remove('step-visible');
 
   document.querySelectorAll('.form-quiz-card').forEach(item => item.classList.remove('focus'));
   isActive(false, btnNext)
 
+});
+
+
+btnSend.addEventListener('click', function () {
+  if (index === progressBarItems.length) {
+    window.location.href = '../success.html'
+  }
 });
 

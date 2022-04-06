@@ -387,7 +387,6 @@ body {
   background: linear-gradient(101.56deg, #2C2C2C 1.56%, #1C1C1C 95.55%);
   color: #E4E4E4;
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
 }
 
 img {
@@ -398,6 +397,15 @@ svg path {
   fill: inherit;
   stroke: inherit;
   stroke-width: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .container {
@@ -663,6 +671,10 @@ svg path {
   transition: all .4s ease 0s;
 }
 
+.btn-send {
+  display: none;
+}
+
 .form-quiz {
   padding-bottom: 30px;
   height: 100vh;
@@ -863,5 +875,79 @@ svg path {
 .type-site {
   position: absolute;
   visibility: hidden;
+}
+
+.fifth-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 0 33px 0;
+  width: 530px;
+  -webkit-filter: drop-shadow(0px 0px 210px rgba(0, 196, 240, 0.42));
+          filter: drop-shadow(0px 0px 210px rgba(0, 196, 240, 0.42));
+}
+
+.fifth-step-input {
+  background: #F8F8F8;
+  border: none;
+  -webkit-box-shadow: inset 0px 3px 10px rgba(199, 199, 199, 0.25);
+          box-shadow: inset 0px 3px 10px rgba(199, 199, 199, 0.25);
+  border-radius: 5px;
+  padding: 13px 13px;
+  font-size: 16px;
+  line-height: 30px;
+  padding-left: 50px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: #000;
+}
+
+.fifth-step-input:last-child {
+  margin-top: 0;
+}
+
+.fifth-step-input__name {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-bottom: 17px;
+  background-image: url(../img/form/user-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center left 20px;
+}
+
+.fifth-step-input__phone {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-bottom: 17px;
+  background-image: url(../img/form/phone-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center left 20px;
+}
+
+.fifth-step-input__comment {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 17px;
+  background-image: url(../img/form/message-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  resize: none;
+}
+
+.required {
+  margin-top: 6px;
+  margin-left: 49%;
+  font-weight: 375;
+  font-size: 16px;
+  line-height: 20px;
+  color: #828797;
 }
 /*# sourceMappingURL=style.css.map */

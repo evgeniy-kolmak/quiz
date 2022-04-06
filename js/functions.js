@@ -35,3 +35,11 @@ export const isActive = (value, btn) => {
   }
 }
 
+// ФУНКЦИЯ
+// const getValue = coll => {
+//   for (const item of coll) {
+//     if (item.checked) {
+//       return item.value
+//     }
+//   }
+// }
