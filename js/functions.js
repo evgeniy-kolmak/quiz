@@ -35,6 +35,21 @@ export const isActive = (value, btn) => {
   }
 }
 
+export const formValidate = (...values) => {
+  const [input, btn] = values;
+  input.addEventListener('input', function () {
+    if (input.value.length > input.attributes.minlength.nodeValue && input.value.length <= input.attributes.maxlength.nodeValue) {
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    } else {
+      btn.disabled = true;
+      btn.style.opacity = '.5';
+    }
+  });
+}
+
+
+
 // ФУНКЦИЯ
 // const getValue = coll => {
 //   for (const item of coll) {

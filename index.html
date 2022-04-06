@@ -182,13 +182,13 @@
           <h3 class="title">Введите ваши данные для связи</h3>
           <p class="subtitle">Оставьте необходимую информацию и мы свами свяжемся в ближайшее время.</p>
           <form action="#" class="fifth-step">
-            <input autocomplete="off" name="user_name" placeholder="Ваше имя*" type=" text"
-              class="fifth-step-input fifth-step-input__name">
-            <input autocomplete="off" name="user_phone" placeholder="Ваше телефон*" type="number"
-              class="fifth-step-input fifth-step-input__phone">
+            <input autocomplete="off" name="user_name" maxlength="11" placeholder="Ваше имя*" type=" text"
+              class="input fifth-step-input fifth-step-input__name">
+            <input autocomplete="off" minlength="10" maxlength="12" name="user_phone" placeholder="Ваше телефон*"
+              type="number" class="input fifth-step-input fifth-step-input__phone">
             <textarea autocomplete="off" name="user_comment" placeholder="Комментарий к заказу"
               class="fifth-step-input fifth-step-input__comment"></textarea>
-            <span class="required">* - обязательное поле для ввода</span>
+            <span class="required">* - обязательное поле (после ввода кнопка станет активной)</span>
           </form>
         </div>
         <!-- /.form-quiz__item -->

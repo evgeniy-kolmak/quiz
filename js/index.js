@@ -1,4 +1,4 @@
-import { getChecked, getScroll, isActive } from "./functions.js";
+import { getChecked, getScroll, isActive, formValidate } from "./functions.js";
 
 // Кнопки
 const btnStart = document.querySelector('.btn-start');
@@ -40,6 +40,12 @@ const fourthStepCard = document.querySelectorAll('.fourth-step-card');
 const typeSite = document.querySelectorAll('.type-site');
 getChecked(fourthStepCard, typeSite, btnNext);
 
+//Шаг пятый
+const inputPhone = document.querySelector('.fifth-step-input__phone');
+
+
+formValidate(inputPhone, btnSend)
+
 
 btnStart.addEventListener('click', function () {
   header.classList.remove('visible');
@@ -55,6 +61,7 @@ btnNext.addEventListener('click', function () {
   if (index === progressBarItems.length - 1) {
     btnNext.style.display = 'none';
     btnSend.style.display = 'inline-block';
+    isActive(false, btnSend);
   }
   progressBarItems[index].classList.add('active-progress');
   progressBarImage[index].classList.add('active-progress__img');
@@ -65,7 +72,7 @@ btnNext.addEventListener('click', function () {
   const activeProgress = document.querySelectorAll('.active-progress');
   const persentNext = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 + '%';
   progressSuccess.style.width = persentNext;
-  // isActive(false, btnNext)
+  isActive(false, btnNext)
 });
 
 btnPrev.addEventListener('click', function () {
