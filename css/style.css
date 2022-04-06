@@ -830,6 +830,8 @@ svg path {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 0 25px 0;
+  -webkit-filter: drop-shadow(0px 0px 410px rgba(132, 0, 240, 0.42));
+          filter: drop-shadow(0px 0px 410px rgba(132, 0, 240, 0.42));
 }
 
 .fourth-step-card {

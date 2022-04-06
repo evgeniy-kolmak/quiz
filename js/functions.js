@@ -6,10 +6,32 @@ export const getChecked = (...values) => {
     item.classList.add('focus')
     radioBtn.forEach(radio => {
       if (radio.checked) {
-        btn.disabled = false;
-        btn.style.opacity = '1';
+        isActive(radio, btn)
       }
     })
   }));
+}
+
+export const getScroll = (...values) => {
+  const [slider, output, btn] = values;
+  const defaultValue = slider.value;
+  output.textContent = defaultValue + '$';
+  slider.addEventListener('input', function () {
+    output.textContent = slider.value + '$';
+    if (slider.value > defaultValue || slider.value < defaultValue) {
+      isActive(output, btn)
+    }
+  });
+
+}
+
+export const isActive = (value, btn) => {
+  if (value) {
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  } else {
+    btn.disabled = true;
+    btn.style.opacity = '.5';
+  }
 }
 

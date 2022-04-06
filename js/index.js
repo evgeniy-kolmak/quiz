@@ -1,4 +1,4 @@
-import { getChecked } from "./functions.js";
+import { getChecked, getScroll, isActive } from "./functions.js";
 
 // Кнопки
 const btnStart = document.querySelector('.btn-start');
@@ -23,9 +23,11 @@ const typeDesign = document.querySelectorAll('.type-design');
 const formQuizItem = document.querySelectorAll('.form-quiz-item');
 getChecked(firstStepCard, typeDesign, btnNext);
 
+
 // Второй шаг
 const budgetSlider = document.querySelector('.budget-content__slider');
 const budgetOutput = document.querySelector('.budget-content__output');
+getScroll(budgetSlider, budgetOutput, btnNext)
 
 // Третий шаг
 const thirdStepCard = document.querySelectorAll('.third-step-card');
@@ -37,6 +39,7 @@ const fourthStepCard = document.querySelectorAll('.fourth-step-card');
 const typeSite = document.querySelectorAll('.type-site');
 getChecked(fourthStepCard, typeSite, btnNext);
 
+
 btnStart.addEventListener('click', function () {
   header.classList.remove('visible');
   formQuiz.classList.add('visible');
@@ -44,8 +47,7 @@ btnStart.addEventListener('click', function () {
   progressBarImage[index].classList.add('active-progress__img');
   formQuizItem[index].classList.add('step-visible');
   index = 1;
-  btnNext.disabled = true;
-  btnNext.style.opacity = '.5'
+  isActive(false, btnNext)
 });
 
 btnNext.addEventListener('click', function () {
@@ -62,9 +64,7 @@ btnNext.addEventListener('click', function () {
   const activeProgress = document.querySelectorAll('.active-progress');
   const persentNext = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 + '%';
   progressSuccess.style.width = persentNext;
-
-  // btnNext.disabled = true;
-  // btnNext.style.opacity = '.5';
+  isActive(false, btnNext)
 });
 
 btnPrev.addEventListener('click', function () {
@@ -78,24 +78,12 @@ btnPrev.addEventListener('click', function () {
   } else {
     progressBarItems[index].classList.remove('active-progress');
     progressBarImage[index].classList.remove('active-progress__img');
+    formQuizItem[index - 1].classList.add('step-visible');
+    formQuizItem[index].classList.remove('step-visible');
   }
-
-  formQuizItem[index - 1].classList.add('step-visible');
-  formQuizItem[index].classList.remove('step-visible');
 
   document.querySelectorAll('.form-quiz-card').forEach(item => item.classList.remove('focus'));
-
-  btnNext.disabled = true;
-  btnNext.style.opacity = '.5';
+  isActive(false, btnNext)
 
 });
 
-
-//  Второй шаг 
-budgetSlider.addEventListener('input', function () {
-  budgetOutput.textContent = budgetSlider.value + '$';
-  if (budgetSlider.value > '1550' || budgetSlider.value < '1550') {
-    btnNext.disabled = false
-    btnNext.style.opacity = '1';
-  }
-});
