@@ -1,4 +1,4 @@
-import { getChecked, getScroll, isActive, formValidate } from "./functions.js";
+import { getChecked, getScroll, isActive } from "./functions.js";
 
 // Кнопки
 const btnStart = document.querySelector('.btn-start');
@@ -40,9 +40,6 @@ const fourthStepCard = document.querySelectorAll('.fourth-step-card');
 const typeSite = document.querySelectorAll('.type-site');
 getChecked(fourthStepCard, typeSite, btnNext);
 
-//Шаг пятый
-const inputPhone = document.querySelector('.fifth-step-input__phone');
-formValidate(inputPhone, btnSend)
 
 
 btnStart.addEventListener('click', function () {
@@ -60,9 +57,8 @@ btnNext.addEventListener('click', function (event) {
   if (index === progressBarItems.length - 1) {
     btnNext.style.display = 'none';
     btnSend.style.display = 'inline-block';
-    isActive(false, btnSend);
-  }
 
+  }
   progressBarItems[index].classList.add('active-progress');
   progressBarImage[index].classList.add('active-progress__img');
   formQuizItem[index].classList.add('step-visible');
@@ -87,6 +83,11 @@ btnPrev.addEventListener('click', function (event) {
   } else if (index === progressBarItems.length - 1) {
     btnNext.style.display = 'inline-block';
     btnSend.style.display = '';
+    document.querySelectorAll('.input').forEach(el => el.classList.toggle('error'));
+    document.querySelectorAll('label').forEach(el => {
+      el.classList.toggle('error');
+      el.style.display = 'none';
+    });
   }
 
   progressBarItems[index].classList.remove('active-progress');

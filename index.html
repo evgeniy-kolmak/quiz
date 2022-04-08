@@ -182,10 +182,14 @@
           <h3 class="title">Введите ваши данные для связи</h3>
           <p class="subtitle">Оставьте необходимую информацию и мы свами свяжемся в ближайшее время.</p>
           <div class="fifth-step">
-            <input autocomplete="off" name="user_name" maxlength="11" placeholder="Ваше имя*" type=" text"
-              class="input fifth-step-input fifth-step-input__name">
-            <input autocomplete="off" minlength="10" maxlength="12" name="user_phone" placeholder="Ваше телефон*"
-              type="number" class="input fifth-step-input fifth-step-input__phone">
+            <div class="input-group">
+              <input class="input fifth-step-input fifth-step-input__name type=" text" placeholder="Ваше имя*"
+                autocomplete="off" required name="user_name" minlength="2" maxlength="11">
+            </div>
+            <div class="input-group">
+              <input autocomplete="off" minlength="10" maxlength="12" name="user_phone" required
+                placeholder="Ваш телефон*" type="number" class="input fifth-step-input fifth-step-input__phone">
+            </div>
             <textarea autocomplete="off" name="user_comment" placeholder="Комментарий к заказу"
               class="fifth-step-input fifth-step-input__comment"></textarea>
             <span class="required">* - обязательное поле (после ввода кнопка станет активной)</span>
@@ -200,6 +204,9 @@
     </div>
     <!-- /.container -->
   </section>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/form-validate.js"></script>
   <script type="module" src="js/index.js"></script>
 </body>
 
