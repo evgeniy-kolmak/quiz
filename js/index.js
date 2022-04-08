@@ -57,7 +57,6 @@ btnNext.addEventListener('click', function (event) {
   if (index === progressBarItems.length - 1) {
     btnNext.style.display = 'none';
     btnSend.style.display = 'inline-block';
-
   }
   progressBarItems[index].classList.add('active-progress');
   progressBarImage[index].classList.add('active-progress__img');
@@ -69,6 +68,7 @@ btnNext.addEventListener('click', function (event) {
   const persentNext = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 + '%';
   progressSuccess.style.width = persentNext;
   isActive(false, btnNext)
+
 });
 
 btnPrev.addEventListener('click', function (event) {
@@ -81,15 +81,18 @@ btnPrev.addEventListener('click', function (event) {
     header.classList.add('visible');
     formQuiz.classList.remove('visible');
   } else if (index === progressBarItems.length - 1) {
-    btnNext.style.display = 'inline-block';
-    btnSend.style.display = '';
-    document.querySelectorAll('.input').forEach(el => el.classList.toggle('error'));
+    btnNext.style.display = 'inline-flex';
+    btnSend.style.display = 'none';
+
+    document.querySelectorAll('.input').forEach(el => {
+      el.classList.remove('error');
+      el.value = '';
+    });
     document.querySelectorAll('label').forEach(el => {
-      el.classList.toggle('error');
+      el.classList.remove('error');
       el.style.display = 'none';
     });
   }
-
   progressBarItems[index].classList.remove('active-progress');
   progressBarImage[index].classList.remove('active-progress__img');
   formQuizItem[index - 1].classList.add('step-visible');
@@ -100,3 +103,13 @@ btnPrev.addEventListener('click', function (event) {
 
 });
 
+// Помощь валидации форм
+const input = document.querySelectorAll('.input');
+input.forEach(el => el.addEventListener('input', function () {
+  console.log(el.value);
+  if (el.value !== '') {
+    isActive(false, btnPrev);
+  } else {
+    isActive(input, btnPrev)
+  }
+}));

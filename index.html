@@ -21,12 +21,12 @@
       </svg>
       <h3 class="title">Самое время выбрать дизайн</h3>
       <span class="subtitle">Пройди опрос и получи скидку на первый заказ</span>
-      <button class="btn btn-start">
+      <buttobutton class="btn btn-start">
         Начать
         <svg class="arrow-right">
           <use xlink:href="img/sprite.svg#arrow-right"></use>
         </svg>
-      </button>
+      </buttobutton>
       <span class="header-item__link">Очень жаль что вы передумали. <a class="header-item__link--backout"
           href="https://www.webhuman.ru/">Вернуться на главную</a></span>
     </div>
@@ -35,9 +35,11 @@
   <!-- /.header -->
   <section class="form-quiz">
     <div class=" container">
-      <svg class="logo logo-form-quiz">
-        <use xlink:href="img/sprite.svg#logo"></use>
-      </svg>
+      <a class="logo-link" href="https://design.webhuman.ru/">
+        <svg class="logo logo-form-quiz">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
       <div class="progress-bar">
         <div class="progress">
           <div class="progress-success"></div>
@@ -188,18 +190,18 @@
                 autocomplete="off" required name="user_name" minlength="2" maxlength="11">
             </div>
             <div class="input-group">
-              <input autocomplete="off" minlength="10" maxlength="12" name="user_phone" required
+              <input autocomplete="off" minlength="10" maxlength="14" name="user_phone" required
                 placeholder="Ваш телефон*" type="number" class="input fifth-step-input fifth-step-input__phone">
             </div>
-            <textarea autocomplete="off" name="user_comment" placeholder="Комментарий к заказу"
+            <textarea autocomplete=" off" name="user_comment" placeholder="Комментарий к заказу"
               class="fifth-step-input fifth-step-input__comment"></textarea>
             <span class="required">* - обязательное поле (после ввода кнопка станет активной)</span>
           </div>
         </div>
         <!-- /.form-quiz__item -->
         <button class="btn btn-prev">Назад</button>
-        <button type="submit" class="btn btn-send">Отправить</button>
         <button class="btn btn-next">Продолжить</button>
+        <button type="submit" class="btn btn-send">Отправить</button>
       </form>
       <!-- /.form-quiz__items -->
     </div>
