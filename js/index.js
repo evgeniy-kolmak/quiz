@@ -42,8 +42,6 @@ getChecked(fourthStepCard, typeSite, btnNext);
 
 //Шаг пятый
 const inputPhone = document.querySelector('.fifth-step-input__phone');
-
-
 formValidate(inputPhone, btnSend)
 
 
@@ -57,12 +55,14 @@ btnStart.addEventListener('click', function () {
   isActive(false, btnNext)
 });
 
-btnNext.addEventListener('click', function () {
+btnNext.addEventListener('click', function (event) {
+  event.preventDefault();
   if (index === progressBarItems.length - 1) {
     btnNext.style.display = 'none';
     btnSend.style.display = 'inline-block';
     isActive(false, btnSend);
   }
+
   progressBarItems[index].classList.add('active-progress');
   progressBarImage[index].classList.add('active-progress__img');
   formQuizItem[index].classList.add('step-visible');
@@ -75,7 +75,8 @@ btnNext.addEventListener('click', function () {
   isActive(false, btnNext)
 });
 
-btnPrev.addEventListener('click', function () {
+btnPrev.addEventListener('click', function (event) {
+  event.preventDefault();
   index -= 1;
   const activeProgress = document.querySelectorAll('.active-progress');
   const persentPrev = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 - 25 + '%';
@@ -96,12 +97,5 @@ btnPrev.addEventListener('click', function () {
   document.querySelectorAll('.form-quiz-card').forEach(item => item.classList.remove('focus'));
   isActive(false, btnNext)
 
-});
-
-
-btnSend.addEventListener('click', function () {
-  if (index === progressBarItems.length) {
-    window.location.href = '../success.html'
-  }
 });
 

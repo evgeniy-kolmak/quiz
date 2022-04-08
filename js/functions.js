@@ -48,13 +48,3 @@ export const formValidate = (...values) => {
   });
 }
 
-
-
-// ФУНКЦИЯ
-// const getValue = coll => {
-//   for (const item of coll) {
-//     if (item.checked) {
-//       return item.value
-//     }
-//   }
-// }
