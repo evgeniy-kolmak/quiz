@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Заявка отправлена</title>
 </head>
 
 <body>
-  <h1>Вы прошли успеншо</h1>
+  <section class="success">
+    <div class="success-item success-item__content">
+      <a href="https://www.webhuman.ru/">
+        <svg class="logo">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <h3 class="title">Успех! Ваша заявка отправлена.</h3>
+      <p class="subtitle success-subtitle">Ваш промокод на скидку при первом заказе
+      </p>
+      <span class="promocode"></span>
+      <div class="success-telegram-channel">
+        Еще больше макетов вы можете найти у нас в сообществе
+        <a class="success-telegram-channel__link" href="#">
+          <svg class="telegram">
+            <use xlink:href="img/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </div>
+      <a class="btn success-btn" href="https://www.webhuman.ru/">Вернуться на главную</a>
+    </div>
+    <!-- /.success-content -->
+    <div class=" success-item success-item__img">
+    </div>
+    <!-- /.success-item__img -->
+  </section>
+  <!-- /.success -->
+  <script type="module" src="js/success.js"></script>
 </body>
 
 </html>

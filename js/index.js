@@ -93,6 +93,7 @@ btnPrev.addEventListener('click', function (event) {
       el.style.display = 'none';
     });
   }
+  document.querySelector('.fifth-step-input__comment').value = ''
   progressBarItems[index].classList.remove('active-progress');
   progressBarImage[index].classList.remove('active-progress__img');
   formQuizItem[index - 1].classList.add('step-visible');
@@ -113,3 +114,7 @@ input.forEach(el => el.addEventListener('input', function () {
     isActive(input, btnPrev)
   }
 }));
+
+// 
+
+console.log(document.querySelector('.h1').textContent = input[0].value);
