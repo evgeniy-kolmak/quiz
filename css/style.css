@@ -493,6 +493,7 @@ input::-webkit-inner-spin-button {
 }
 
 .logo {
+  text-decoration: none;
   fill: #eeac05;
   width: 60px;
 }
@@ -785,7 +786,7 @@ input::-webkit-inner-spin-button {
 }
 
 .success-subtitle {
-  margin: 5px 0 30px 0;
+  margin: 15px 0 30px 0;
 }
 
 .success-item {
@@ -850,7 +851,7 @@ input::-webkit-inner-spin-button {
 }
 
 .success-btn {
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 .promocode {
@@ -873,6 +874,12 @@ input::-webkit-inner-spin-button {
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.user-name {
+  font-weight: 500;
+  font-size: 24px;
+  color: #C35B48;
 }
 
 .form-quiz {

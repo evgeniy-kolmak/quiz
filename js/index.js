@@ -107,7 +107,6 @@ btnPrev.addEventListener('click', function (event) {
 // Помощь валидации форм
 const input = document.querySelectorAll('.input');
 input.forEach(el => el.addEventListener('input', function () {
-  console.log(el.value);
   if (el.value !== '') {
     isActive(false, btnPrev);
   } else {
@@ -115,6 +114,7 @@ input.forEach(el => el.addEventListener('input', function () {
   }
 }));
 
-// 
+btnSend.addEventListener('click', function () {
+  sessionStorage.userName = document.querySelector('.fifth-step-input__name').value;
 
-console.log(document.querySelector('.h1').textContent = input[0].value);
+});
