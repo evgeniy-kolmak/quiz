@@ -40,170 +40,175 @@
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
       </a>
-      <div class="progress-bar">
-        <div class="progress">
-          <div class="progress-success"></div>
+      <div class="form-quiz-wrapper">
+        <div class="progress-bar">
+          <div class="progress">
+            <div class="progress-success"></div>
+          </div>
+          <div class="progress-bar__item">
+            <svg class="progress-bar__img">
+              <use xlink:href="img/sprite.svg#info"></use>
+            </svg>
+          </div>
+          <div class="progress-bar__item">
+            <svg class="progress-bar__img">
+              <use xlink:href="img/sprite.svg#budget"></use>
+            </svg>
+          </div>
+          <div class="progress-bar__item">
+            <svg class="progress-bar__img">
+              <use xlink:href="img/sprite.svg#gear"></use>
+            </svg>
+          </div>
+          <div class="progress-bar__item">
+            <svg class="progress-bar__img">
+              <use xlink:href="img/sprite.svg#theme"></use>
+            </svg>
+          </div>
+          <div class="progress-bar__item">
+            <svg class="progress-bar__img">
+              <use xlink:href="img/sprite.svg#data"></use>
+            </svg>
+          </div>
         </div>
-        <div class="progress-bar__item">
-          <svg class="progress-bar__img">
-            <use xlink:href="img/sprite.svg#info"></use>
-          </svg>
-        </div>
-        <div class="progress-bar__item">
-          <svg class="progress-bar__img">
-            <use xlink:href="img/sprite.svg#budget"></use>
-          </svg>
-        </div>
-        <div class="progress-bar__item">
-          <svg class="progress-bar__img">
-            <use xlink:href="img/sprite.svg#gear"></use>
-          </svg>
-        </div>
-        <div class="progress-bar__item">
-          <svg class="progress-bar__img">
-            <use xlink:href="img/sprite.svg#theme"></use>
-          </svg>
-        </div>
-        <div class="progress-bar__item">
-          <svg class="progress-bar__img">
-            <use xlink:href="img/sprite.svg#data"></use>
-          </svg>
-        </div>
+        <!-- /.progess-bar -->
+        <!-- Первый шаг в квизе -->
+        <form action="telegram.php" method="post" class="form-quiz-items">
+          <div class="form-quiz-item">
+            <h3 class="title">Какова деятельность вашего сайта?</h3>
+            <p class="subtitle subtitle-item">Мощный инстурмент для вашего бизнеса или же уникальная и индивидуальная
+              страница
+              пользователя.</p>
+            <div class="form-quiz-cards first-step-cards">
+              <input class="type-design" type="radio" value="Корпоративная" name="type-design">
+              <input class="type-design" type="radio" value="Частная" name="type-design">
+              <div tabindex="1" class="form-quiz-card first-step-card">
+                <h4 class="form-quiz-card__title">Корпоративная</h4>
+                <img class="form-quiz-card__img first-step-img" src="img/first-step/corporate.png"
+                  alt="icon: Корпоративная">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex="2" class="form-quiz-card first-step-card">
+                <h4 class="form-quiz-card__title">Частная</h4>
+                <img class="form-quiz-card__img first-step-img" src="img/first-step/private.png" alt="icon: Частная">
+              </div>
+              <!-- /.form-quiz__card -->
+            </div>
+            <!-- /.form-quiz__cards -->
+          </div>
+          <!-- /.form-quiz__item -->
+          <!-- Второй шаг в квизе -->
+          <div class="form-quiz-item">
+            <h3 class="title">Какой бюджет выделен на проект?</h3>
+            <p class="subtitle subtitle-item">Хороший дизайн-макет - не значит дрогой.</p>
+            <div class="budget-content">
+              <input class="budget-content__slider" name="budget" value="1550$" min="100" max="3000" type="range">
+              <div class="budget-content__output"></div>
+            </div>
+            <!-- /.budget-content -->
+          </div>
+          <!-- /.form-quiz__item -->
+          <!-- Третий шаг в квизе -->
+          <div class="form-quiz-item">
+            <h3 class="title">Выберите сложности вашего проекта?</h3>
+            <p class="subtitle subtitle-item">Куча фунций и фич, минимализм или же золотая середина.</p>
+            <div class="form-quiz-cards third-step-cards">
+              <input class="type-level" type="radio" value="Минимум" name="type-level">
+              <input class="type-level" type="radio" value="Средний" name="type-level">
+              <input class="type-level" type="radio" value="Максиум" name="type-level">
+              <div tabindex="1" class="form-quiz-card third-step-card">
+                <h4 class="form-quiz-card__title">Минимум</h4>
+                <img class="form-quiz-card__img" src="img/third-step/low.png" alt="icon: Минимум">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex="2" class="form-quiz-card third-step-card">
+                <h4 class="form-quiz-card__title">Средний</h4>
+                <img class="form-quiz-card__img" src="img/third-step/middle.png" alt="icon: Средней">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex=" 3" class="form-quiz-card third-step-card">
+                <h4 class="form-quiz-card__title">Максиум</h4>
+                <img class="form-quiz-card__img" src="img/third-step/hard.png" alt="icon: Максимум">
+              </div>
+              <!-- /.form-quiz__card -->
+            </div>
+            <!-- /.form-quiz__cards -->
+          </div>
+          <!-- /.form-quiz__item -->
+          <!-- Четвертый шаг -->
+          <div class="form-quiz-item">
+            <h3 class="title">Какой тип сайта вам больше подходит?</h3>
+            <p class="subtitle subtitle-item">Если из представленных ничего не подошло, выберите "другое".</p>
+            <div class="form-quiz-cards fourth-step-cards">
+              <input class="type-site" type="radio" value="Landing page" name="type-site">
+              <input class="type-site" type="radio" value="Интернет магазин" name="type-site">
+              <input class="type-site" type="radio" value="Веб-приложение" name="type-site">
+              <input class="type-site" type="radio" value="Портфолио" name="type-site">
+              <input class="type-site" type="radio" value="Личный блог" name="type-site">
+              <input class="type-site" type="radio" value="Другое" name="type-site">
+              <div tabindex="1" class="form-quiz-card fourth-step-card">
+                <h4 class="form-quiz-card__title fourth-step-title">Landing page</h4>
+                <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/landing-page.png"
+                  alt="icon: Landing page">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex="2" class="form-quiz-card fourth-step-card">
+                <h4 class="form-quiz-card__title fourth-step-title">Интернет магазин</h4>
+                <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/shop.png"
+                  alt="icon: Интернет магазин">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex="3" class="form-quiz-card fourth-step-card">
+                <h4 class="form-quiz-card__title fourth-step-title">Веб-приложение</h4>
+                <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/app.png"
+                  alt="icon: Веб-приложение">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex="4" class="form-quiz-card fourth-step-card">
+                <h4 class="form-quiz-card__title fourth-step-title">Портфолио</h4>
+                <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/cv.png" alt="icon: Портфолио">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex="5" class="form-quiz-card fourth-step-card">
+                <h4 class="form-quiz-card__title fourth-step-title">Личный блог</h4>
+                <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/blog.png" alt="icon: Личный блог">
+              </div>
+              <!-- /.form-quiz__card -->
+              <div tabindex="6" class="form-quiz-card fourth-step-card">
+                <h4 class="form-quiz-card__title fourth-step-title">Другое</h4>
+                <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/other.png" alt="icon: Другое">
+              </div>
+              <!-- /.form-quiz__card -->
+            </div>
+            <!-- /.form-quiz__cards -->
+          </div>
+          <!-- /.form-quiz__item -->
+          <!-- Пятый шаг -->
+          <div class="form-quiz-item">
+            <h3 class="title">Введите ваши данные для связи</h3>
+            <p class="subtitle subtitle-item">Оставьте необходимую информацию и мы свами свяжемся в ближайшее время.</p>
+            <div class="fifth-step">
+              <div class="input-group">
+                <input class="input fifth-step-input fifth-step-input__name type=" text" placeholder="Ваше имя*"
+                  autocomplete="off" required name="user_name" minlength="2" maxlength="11">
+              </div>
+              <div class="input-group">
+                <input autocomplete="off" minlength="10" maxlength="14" name="user_phone" required
+                  placeholder="Ваш телефон*" type="number" class="input fifth-step-input fifth-step-input__phone">
+              </div>
+              <textarea autocomplete=" off" name="user_comment" placeholder="Комментарий к заказу"
+                class="fifth-step-input fifth-step-input__comment"></textarea>
+              <span class="required">* - обязательное поле (после ввода кнопка станет активной)</span>
+            </div>
+          </div>
+          <!-- /.form-quiz__item -->
+          <button class="btn btn-prev">Назад</button>
+          <button class="btn btn-next">Продолжить</button>
+          <button type="submit" class="btn btn-send">Отправить</button>
+        </form>
+        <!-- /.form-quiz__items -->
       </div>
-      <!-- /.progess-bar -->
-      <!-- Первый шаг в квизе -->
-      <form action="telegram.php" method="post" class="form-quiz-items">
-        <div class="form-quiz-item">
-          <h3 class="title">Какова деятельность вашего сайта?</h3>
-          <p class="subtitle">Мощный инстурмент для вашего бизнеса или же уникальная и индивидуальная страница
-            пользователя.</p>
-          <div class="form-quiz-cards first-step-cards">
-            <input class="type-design" type="radio" value="Корпоративная" name="type-design">
-            <input class="type-design" type="radio" value="Частная" name="type-design">
-            <div tabindex="1" class="form-quiz-card first-step-card">
-              <h4 class="form-quiz-card__title">Корпоративная</h4>
-              <img class="form-quiz-card__img first-step-img" src="img/first-step/corporate.png"
-                alt="icon: Корпоративная">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex="2" class="form-quiz-card first-step-card">
-              <h4 class="form-quiz-card__title">Частная</h4>
-              <img class="form-quiz-card__img first-step-img" src="img/first-step/private.png" alt="icon: Частная">
-            </div>
-            <!-- /.form-quiz__card -->
-          </div>
-          <!-- /.form-quiz__cards -->
-        </div>
-        <!-- /.form-quiz__item -->
-        <!-- Второй шаг в квизе -->
-        <div class="form-quiz-item">
-          <h3 class="title">Какой бюджет выделен на проект?</h3>
-          <p class="subtitle">Хороший дизайн-макет - не значит дрогой.</p>
-          <div class="budget-content">
-            <input class="budget-content__slider" name="budget" value="1550$" min="100" max="3000" type="range">
-            <div class="budget-content__output"></div>
-          </div>
-          <!-- /.budget-content -->
-        </div>
-        <!-- /.form-quiz__item -->
-        <!-- Третий шаг в квизе -->
-        <div class="form-quiz-item">
-          <h3 class="title">Выберите сложности вашего проекта?</h3>
-          <p class="subtitle">Куча фунций и фич, минимализм или же золотая середина.</p>
-          <div class="form-quiz-cards third-step-cards">
-            <input class="type-level" type="radio" value="Минимум" name="type-level">
-            <input class="type-level" type="radio" value="Средний" name="type-level">
-            <input class="type-level" type="radio" value="Максиум" name="type-level">
-            <div tabindex="1" class="form-quiz-card third-step-card">
-              <h4 class="form-quiz-card__title">Минимум</h4>
-              <img class="form-quiz-card__img" src="img/third-step/low.png" alt="icon: Минимум">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex="2" class="form-quiz-card third-step-card">
-              <h4 class="form-quiz-card__title">Средний</h4>
-              <img class="form-quiz-card__img" src="img/third-step/middle.png" alt="icon: Средней">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex=" 3" class="form-quiz-card third-step-card">
-              <h4 class="form-quiz-card__title">Максиум</h4>
-              <img class="form-quiz-card__img" src="img/third-step/hard.png" alt="icon: Максимум">
-            </div>
-            <!-- /.form-quiz__card -->
-          </div>
-          <!-- /.form-quiz__cards -->
-        </div>
-        <!-- /.form-quiz__item -->
-        <!-- Четвертый шаг -->
-        <div class="form-quiz-item">
-          <h3 class="title">Какой тип сайта вам больше подходит?</h3>
-          <p class="subtitle">Если из представленных ничего не подошло, выберите "другое".</p>
-          <div class="form-quiz-cards fourth-step-cards">
-            <input class="type-site" type="radio" value="Landing page" name="type-site">
-            <input class="type-site" type="radio" value="Интернет магазин" name="type-site">
-            <input class="type-site" type="radio" value="Веб-приложение" name="type-site">
-            <input class="type-site" type="radio" value="Портфолио" name="type-site">
-            <input class="type-site" type="radio" value="Личный блог" name="type-site">
-            <input class="type-site" type="radio" value="Другое" name="type-site">
-            <div tabindex="1" class="form-quiz-card fourth-step-card">
-              <h4 class="form-quiz-card__title fourth-step-title">Landing page</h4>
-              <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/landing-page.png"
-                alt="icon: Landing page">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex="2" class="form-quiz-card fourth-step-card">
-              <h4 class="form-quiz-card__title fourth-step-title">Интернет магазин</h4>
-              <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/shop.png"
-                alt="icon: Интернет магазин">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex="3" class="form-quiz-card fourth-step-card">
-              <h4 class="form-quiz-card__title fourth-step-title">Веб-приложение</h4>
-              <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/app.png" alt="icon: Веб-приложение">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex="4" class="form-quiz-card fourth-step-card">
-              <h4 class="form-quiz-card__title fourth-step-title">Портфолио</h4>
-              <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/cv.png" alt="icon: Портфолио">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex="5" class="form-quiz-card fourth-step-card">
-              <h4 class="form-quiz-card__title fourth-step-title">Личный блог</h4>
-              <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/blog.png" alt="icon: Личный блог">
-            </div>
-            <!-- /.form-quiz__card -->
-            <div tabindex="6" class="form-quiz-card fourth-step-card">
-              <h4 class="form-quiz-card__title fourth-step-title">Другое</h4>
-              <img class="form-quiz-card__img fourth-step-img" src="img/fourth-step/other.png" alt="icon: Другое">
-            </div>
-            <!-- /.form-quiz__card -->
-          </div>
-          <!-- /.form-quiz__cards -->
-        </div>
-        <!-- /.form-quiz__item -->
-        <!-- Пятый шаг -->
-        <div class="form-quiz-item">
-          <h3 class="title">Введите ваши данные для связи</h3>
-          <p class="subtitle">Оставьте необходимую информацию и мы свами свяжемся в ближайшее время.</p>
-          <div class="fifth-step">
-            <div class="input-group">
-              <input class="input fifth-step-input fifth-step-input__name type=" text" placeholder="Ваше имя*"
-                autocomplete="off" required name="user_name" minlength="2" maxlength="11">
-            </div>
-            <div class="input-group">
-              <input autocomplete="off" minlength="10" maxlength="14" name="user_phone" required
-                placeholder="Ваш телефон*" type="number" class="input fifth-step-input fifth-step-input__phone">
-            </div>
-            <textarea autocomplete=" off" name="user_comment" placeholder="Комментарий к заказу"
-              class="fifth-step-input fifth-step-input__comment"></textarea>
-            <span class="required">* - обязательное поле (после ввода кнопка станет активной)</span>
-          </div>
-        </div>
-        <!-- /.form-quiz__item -->
-        <button class="btn btn-prev">Назад</button>
-        <button class="btn btn-next">Продолжить</button>
-        <button type="submit" class="btn btn-send">Отправить</button>
-      </form>
-      <!-- /.form-quiz__items -->
+      <!-- /.form-quiz_wrapper -->
     </div>
     <!-- /.container -->
   </section>

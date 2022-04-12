@@ -83,6 +83,9 @@ btnPrev.addEventListener('click', function (event) {
     header.classList.add('visible');
     formQuiz.classList.remove('visible');
   } else if (index === progressBarItems.length - 1) {
+    if (window.matchMedia('(max-width: 820px)').matches) {
+      progressSuccess.style.height = persentPrev;
+    }
     btnNext.style.display = 'inline-flex';
     btnSend.style.display = 'none';
     document.querySelectorAll('.input').forEach(el => {
