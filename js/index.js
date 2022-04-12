@@ -63,10 +63,13 @@ btnNext.addEventListener('click', function (event) {
   formQuizItem[index].classList.add('step-visible');
   formQuizItem[index - 1].classList.remove('step-visible');
   index += 1;
-
   const activeProgress = document.querySelectorAll('.active-progress');
   const persentNext = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 + '%';
-  progressSuccess.style.width = persentNext;
+  if (window.matchMedia('(max-width: 820px)').matches) {
+    progressSuccess.style.height = persentNext;
+  } else {
+    progressSuccess.style.width = persentNext;
+  }
   isActive(false, btnNext)
 
 });
@@ -76,14 +79,12 @@ btnPrev.addEventListener('click', function (event) {
   index -= 1;
   const activeProgress = document.querySelectorAll('.active-progress');
   const persentPrev = ((activeProgress.length - 1) / (progressBarItems.length - 1)) * 100 - 25 + '%';
-  progressSuccess.style.width = persentPrev;
   if (index < 1) {
     header.classList.add('visible');
     formQuiz.classList.remove('visible');
   } else if (index === progressBarItems.length - 1) {
     btnNext.style.display = 'inline-flex';
     btnSend.style.display = 'none';
-
     document.querySelectorAll('.input').forEach(el => {
       el.classList.remove('error');
       el.value = '';
@@ -92,7 +93,12 @@ btnPrev.addEventListener('click', function (event) {
       el.classList.remove('error');
       el.style.display = 'none';
     });
+  } else if (window.matchMedia('(max-width: 820px)').matches) {
+    progressSuccess.style.height = persentPrev;
+  } else {
+    progressSuccess.style.width = persentPrev;
   }
+
   document.querySelector('.fifth-step-input__comment').value = ''
   progressBarItems[index].classList.remove('active-progress');
   progressBarImage[index].classList.remove('active-progress__img');
